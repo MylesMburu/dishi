@@ -3,7 +3,7 @@ import IMG1 from '../assets/githeri.jpg'
 
 const Home = () => {
   return (
-    <div className='text-red-700'>
+    <div className='text-red-700 px-16 py-6'>
         <div>
         <a href="#">Log in</a>
         <a href="#">Sign up</a>
@@ -14,12 +14,12 @@ const Home = () => {
         </div>
 
        <div>
-        <h4 className='font-bold'>Latest Recipies</h4>
-        <div>
+        <h4 className='text-brown-700 font-bold mt-6 pb-2 border-b border-gray-300'>Latest Recipies</h4>
+        <div className='mt-8'>
             {/* cards */}
             <img src={IMG1} alt="Image of githeri" />
             <div>
-                <span>Githeri noma ya njahi</span>
+                <span>Githeri noma na avocado</span>
             </div>
         </div>
        </div>

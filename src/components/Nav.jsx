@@ -4,7 +4,7 @@ const Nav = () => {
   return (
     <nav>
         <div>
-            <h1><a href="/">Dishi</a></h1>
+            <h1 className='text-bold text-gray-500 text-xl font-bold uppercase p-4'><a href="/">Dishi</a></h1>
         </div>
         <ul>
             <li>
