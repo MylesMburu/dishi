@@ -3,7 +3,7 @@ import IMG1 from '../assets/githeri.jpg'
 
 const Home = () => {
   return (
-    <div className='text-red-700 px-16 py-6'>
+    <div className='text-red-700 px-16 py-6 font-Poppins'>
         <div>
         <a href="#">Log in</a>
         <a href="#">Sign up</a>
