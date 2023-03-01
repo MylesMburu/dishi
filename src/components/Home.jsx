@@ -1,9 +1,13 @@
 import React from 'react'
 import IMG1 from '../assets/githeri.jpg'
+import IMG2 from '../assets/mukimo.webp'
+import IMG3 from '../assets/pilau.webp'
+
+
 
 const Home = () => {
   return (
-    <div className='text-red-700 px-16 py-6 font-Poppins'>
+    <div className='bg-gray-300 text-red-700 px-16 py-6 font-Poppins'>
         <div>
           <div className="login flex justify-center gap-6 mb-9 md:justify-end ">
           <a href="#">Log in</a>
@@ -16,15 +20,44 @@ const Home = () => {
           </header>
         </div>
 
-       <div>
         <h4 className='text-brown-700 font-bold mt-6 pb-2 border-b border-gray-300'>Latest Recipies</h4>
-        <div className='card mt-8 rounded overflow-hidden'>
+       <div className='grid grid-cols-3 gap-5'>
+        <div className='card '>
             {/* cards */}
-            <img src={IMG1} alt="Image of githeri" />
-            <div>
-                <span>Githeri noma na avocado</span>
+            <img src={IMG1} alt="Image of githeri"className='image' />
+            <div className='m-4'>
+                <span className='font-bold text-center'>Githeri noma na avocado</span>
+                <span className='block'>Recipe by Mbush</span>
+            </div>
+            <div className='badge'>
+              <span>1 hr</span>
             </div>
         </div>
+
+        <div className='card '>
+            {/* cards */}
+            <img src={IMG2} alt="Image of githeri"className='image' />
+            <div className='m-4'>
+                <span className='font-bold text-center'>Mukimo safi</span>
+                <span className='block'>Recipe by Mbush</span>
+            </div>
+            <div className='badge'>
+              <span>1 hr</span>
+            </div>
+        </div>
+
+        <div className='card '>
+            {/* cards */}
+            <img src={IMG3} alt="Image of githeri"className='image' />
+            <div className='m-4'>
+                <span className='font-bold text-center'>Pilau smata</span>
+                <span className='block'>Recipe by Mbush</span>
+            </div>
+            <div className='badge'>
+              <span>1 hr</span>
+            </div>
+        </div>
+
        </div>
 
     </div>
