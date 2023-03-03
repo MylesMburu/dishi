@@ -12,7 +12,7 @@ const Home = () => {
         <div>
           <div className="login flex justify-center gap-6 mb-9 md:justify-end ">
           <a href="#" className='btn'>Log in</a>
-          <a href="#" className='btn border-l border-l-2 pl-4 border-black'>Sign up</a>
+          <a href="#" className='btn border-l-2 pl-4 border-black'>Sign up</a>
           </div>
         
           <header>

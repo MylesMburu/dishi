@@ -1,13 +1,16 @@
 import React from 'react'
+import { HiViewList } from "react-icons/hi"; 
+
 
 const Nav = () => {
   return (
-    <nav className='flex justify-between shadow-md'>
+    <nav className='flex justify-between shadow-md items-center'>
         <div>
             <h1 className='text-bold text-gray-500 text-xl font-bold uppercase p-4'><a href="/">Dishi</a></h1>
+            <HiViewList className='md:  ' />
         </div>
         <div>
-        <ul className='flex flex-row gap-6 p-4'>
+        <ul className='flex flex-row gap-6 p-4 sm:hidden'>
             <li>
                 <a href="#">
                     <span>Home</span>
@@ -24,6 +27,8 @@ const Nav = () => {
                 </a>
             </li>
         </ul>
+
+
         </div>
         
     </nav>
