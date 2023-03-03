@@ -577,20 +577,36 @@ video {
   display: block;
 }
 
+.inline-block{
+  display: inline-block;
+}
+
 .flex{
   display: flex;
 }
 
-.h-32{
-  height: 8rem;
+.grid{
+  display: grid;
 }
 
-.w-full{
-  width: 100%;
+.w-5{
+  width: 1.25rem;
+}
+
+.flex-row{
+  flex-direction: row;
 }
 
 .justify-center{
   justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.gap-5{
+  gap: 1.25rem;
 }
 
 .gap-6{
@@ -601,6 +617,19 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-l{
+  border-left-width: 1px;
+}
+
+.border-l-2{
+  border-left-width: 2px;
+}
+
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .border-gray-300{
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -609,10 +638,6 @@ video {
 .bg-gray-300{
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.object-contain{
-  object-fit: contain;
 }
 
 .p-4{
@@ -631,6 +656,14 @@ video {
 
 .pb-2{
   padding-bottom: 0.5rem;
+}
+
+.pl-4{
+  padding-left: 1rem;
+}
+
+.pr-1{
+  padding-right: 0.25rem;
 }
 
 .text-center{
@@ -679,6 +712,12 @@ video {
   color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .card{
   position: relative;
   margin-top: 2rem;
@@ -691,6 +730,23 @@ video {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@-webkit-keyframes pulse{
+  50%{
+    opacity: .5;
+  }
+}
+
+@keyframes pulse{
+  50%{
+    opacity: .5;
+  }
+}
+
+.card:hover{
+  -webkit-animation: pulse 0.8s;
+          animation: pulse 0.8s;
 }
 
 .badge{
@@ -708,13 +764,35 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.image{
+  height: 8rem;
+  width: 100%;
+  object-fit: cover;
+}
+
 @media (min-width: 640px){
-  .sm\:h-48{
+  .image{
     height: 12rem;
   }
 }
 
+.btn{
+  cursor: pointer;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.btn:hover{
+  opacity: 0.7;
+}
+
 @media (min-width: 768px){
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:justify-end{
     justify-content: flex-end;
   }

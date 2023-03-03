@@ -5,11 +5,14 @@
 @import "tailwindcss/utilities";
 
 .card{
-    @apply flex-col justify-center mt-8 bg-white rounded overflow-hidden shadow-md relative
+    @apply flex-col justify-center mt-8 bg-white rounded overflow-hidden shadow-md relative hover:animate-pulse1
 }
 .badge{
     @apply text-xs text-white bg-gray-400 rounded-full p-1 absolute top-0 mt-1 ml-2
 }
 .image{
 @apply w-full h-32 object-cover sm:h-48
+}
+.btn{
+    @apply  py-2 py-3  font-bold cursor-pointer tracking-wider hover:opacity-70
 }

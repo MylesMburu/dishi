@@ -2,6 +2,7 @@ import React from 'react'
 import IMG1 from '../assets/githeri.jpg'
 import IMG2 from '../assets/mukimo.webp'
 import IMG3 from '../assets/pilau.webp'
+import { AiOutlineClockCircle } from "react-icons/ai"; 
 
 
 
@@ -10,8 +11,8 @@ const Home = () => {
     <div className='bg-gray-300 text-red-700 px-16 py-6 font-Poppins'>
         <div>
           <div className="login flex justify-center gap-6 mb-9 md:justify-end ">
-          <a href="#">Log in</a>
-          <a href="#">Sign up</a>
+          <a href="#" className='btn'>Log in</a>
+          <a href="#" className='btn border-l border-l-2 pl-4 border-black'>Sign up</a>
           </div>
         
           <header>
@@ -21,7 +22,7 @@ const Home = () => {
         </div>
 
         <h4 className='text-brown-700 font-bold mt-6 pb-2 border-b border-gray-300'>Latest Recipies</h4>
-       <div className='grid grid-cols-3 gap-5'>
+       <div className='grid md:grid-cols-3 gap-5 '>
         <div className='card '>
             {/* cards */}
             <img src={IMG1} alt="Image of githeri"className='image' />
@@ -30,6 +31,7 @@ const Home = () => {
                 <span className='block'>Recipe by Mbush</span>
             </div>
             <div className='badge'>
+              <AiOutlineClockCircle className='inline-block pr-1 w-5'/>
               <span>1 hr</span>
             </div>
         </div>
@@ -42,6 +44,7 @@ const Home = () => {
                 <span className='block'>Recipe by Mbush</span>
             </div>
             <div className='badge'>
+            <AiOutlineClockCircle className='inline-block pr-1 w-5'/>
               <span>1 hr</span>
             </div>
         </div>
@@ -54,6 +57,7 @@ const Home = () => {
                 <span className='block'>Recipe by Mbush</span>
             </div>
             <div className='badge'>
+            <AiOutlineClockCircle className='inline-block pr-1 w-5'/>
               <span>1 hr</span>
             </div>
         </div>
