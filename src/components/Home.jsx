@@ -8,7 +8,7 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 
 const Home = () => {
   return (
-    <div className='bg-gray-300 text-red-700 px-16 py-6 font-Poppins'>
+    <div id='Home' className='bg-gray-300 text-red-700 px-16 py-6 font-Poppins'>
         <div>
           <div className="login flex justify-center gap-6 mb-9 md:justify-end ">
           <a href="#" className='btn'>Log in</a>
@@ -21,7 +21,7 @@ const Home = () => {
           </header>
         </div>
 
-        <h4 className='text-brown-700 font-bold mt-6 pb-2 border-b border-gray-300'>Latest Recipies</h4>
+        <h4 className='text-brown-700 font-bold mt-6 pb-2 border-b border-gray-300'>This week's specials</h4>
        <div className='grid md:grid-cols-3 gap-5 '>
         <div className='card '>
             {/* cards */}
