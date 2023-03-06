@@ -1,7 +1,6 @@
-// import './App.css';
 import Contacts from './components/Contacts';
 import Home from './components/Home';
-import About from './components/About';
+import Search from './components/Search';
 import Nav from './components/Nav';
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
     <>
     <Nav/>
     <Home/>
-    <About/>
+    <Search/>
     <Contacts/>
     </>
 

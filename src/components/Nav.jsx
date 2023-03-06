@@ -1,8 +1,5 @@
 import React,{useState} from 'react'
 import { HiViewList } from "react-icons/hi"; 
-import Contacts from './Contacts';
-import About from './About';
-
 
 const Nav = () => {
 const[activeNav,setActiveNav]= useState('#')

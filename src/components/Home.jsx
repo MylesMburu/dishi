@@ -23,7 +23,7 @@ const Home = () => {
 
         <h4 className='text-brown-700 font-bold mt-6 pb-2 border-b border-gray-300'>This week's specials</h4>
        <div className='grid md:grid-cols-3 gap-5 '>
-        <div className='card '>
+        <div className='card'>
             {/* cards */}
             <img src={IMG1} alt="Image of githeri"className='image' />
             <div className='m-4'>
