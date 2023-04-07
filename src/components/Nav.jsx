@@ -17,8 +17,8 @@ const[activeNav,setActiveNav]= useState('#')
                 </a>
             </li>
             <li>
-                <a href='#About' onClick={()=> setActiveNav('#About')} className={activeNav === '#About' ? 'active' : ''}>
-                    <span>About</span>
+                <a href='#Find' onClick={()=> setActiveNav('#Find')} className={activeNav === '#Find' ? 'active' : ''}>
+                    <span>Find</span>
                 </a>
             </li>
             <li>

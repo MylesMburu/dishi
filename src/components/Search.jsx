@@ -5,7 +5,7 @@ import {ImSearch} from 'react-icons/im'
 
 const Search = () => {
   return (
-    <div id='About' className='h-40 bg-gray-400'>
+    <div id='Find' className='h-40 bg-gray-400'>
     
       <div className='flex justify-center items-center flex-row'>
 
