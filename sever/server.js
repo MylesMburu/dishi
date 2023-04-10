@@ -1,4 +1,5 @@
 const express = require('express');
+const fetch = require('node-fetch'); // Add this line
 const app = express();
 
 app.get('/meals/:query', (req, res) => {
@@ -6,14 +7,22 @@ app.get('/meals/:query', (req, res) => {
   const apiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchQuery}`;
 
   fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data); // this will log the data to the console
-      res.send(data); // send the data back to the client as a response
-    })
-    .catch(error => console.error(error));
-});
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('API request failed');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data); // this will log the data to the console
+    res.send(data); // send the data back to the client as a response
+  })
+  .catch(error => {
+    console.error(error);
+    res.status(500).send({ error: error.message });
+  });
 
 app.listen(3001, () => {
   console.log('Server is listening on port 3001');
 });
+})
