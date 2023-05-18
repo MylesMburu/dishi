@@ -14,5 +14,5 @@
 @apply w-full h-32 object-cover sm:h-48
 }
 .btn{
-    @apply  py-2 py-3  font-bold cursor-pointer tracking-wider hover:opacity-70
+    @apply  py-2   font-bold cursor-pointer tracking-wider hover:opacity-70
 }

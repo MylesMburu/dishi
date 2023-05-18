@@ -12,6 +12,7 @@ RECIPE_PUPPY_API_URL = "http://www.recipepuppy.com/api/"
 def search_recipes():
     query = request.args.get('q', '')
     response = requests.get(RECIPE_PUPPY_API_URL, params={'q': query})
+    
     if response.status_code == 200:
         data = response.json()
         recipes = [

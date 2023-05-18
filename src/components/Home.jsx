@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import IMG1 from '../assets/githeri.jpg'
 import IMG2 from '../assets/mukimo.webp'
 import IMG3 from '../assets/pilau.webp'
@@ -7,6 +7,21 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 
 
 const Home = () => {
+
+  useEffect (() =>{
+    getPopular();
+  },[]);
+
+  const getPopular = async () => {
+  const api = await fetch(
+    `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=5`
+
+  );
+  console.log(api);
+  const data = await api.json();
+  console.log(data);
+
+  }
   return (
     <div id='Home' className='bg-gray-300 text-red-700 px-16 py-6 font-Poppins'>
         <div>
