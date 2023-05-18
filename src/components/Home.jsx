@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import IMG1 from '../assets/githeri.jpg'
 import IMG2 from '../assets/mukimo.webp'
 import IMG3 from '../assets/pilau.webp'
@@ -7,6 +7,7 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 
 
 const Home = () => {
+  const [popular, setPopular] = useState([]);
 
   useEffect (() =>{
     getPopular();
@@ -14,14 +15,18 @@ const Home = () => {
 
   const getPopular = async () => {
   const api = await fetch(
-    `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=5`
+    `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=3`
 
   );
   console.log(api);
   const data = await api.json();
   console.log(data);
-
+  
+  setPopular(data.recipes)
   }
+
+
+
   return (
     <div id='Home' className='bg-gray-300 text-red-700 px-16 py-6 font-Poppins'>
         <div>
@@ -79,7 +84,31 @@ const Home = () => {
 
        </div>
 
-    </div>
+      <h4 className='text-brown-700 font-bold mt-6 pb-2 border-b border-gray-300'>Popular dishes</h4>
+        <div className='flex flex-row md:grid-cols-3 gap-5 '>
+        <div className='flex flex-row md:grid-cols-3 gap-5 '>
+    {popular.map( (recipe) =>{
+      return(
+        <div className='card '>
+            {/* cards */}
+            <img src={recipe.image} alt=" "className='image' />
+            <div className='m-4'>
+                <span className='font-bold text-center'>{recipe.title}</span>
+                <span className='block'>Recipe by {recipe.sourceName}</span>
+            </div>
+            <div className='badge'>
+            <AiOutlineClockCircle className='inline-block pr-1 w-5'/>
+              <span>{recipe.readyInMinutes} mins</span>
+            </div>
+        </div>
+      );
+    })
+    }
+  </div>
+        </div>
+       
+        </div>
+    
   )
 }
 

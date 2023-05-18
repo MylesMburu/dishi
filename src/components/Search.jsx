@@ -42,11 +42,7 @@ const Search = () => {
           </form>
         </div>
       </div>
-      <div className="meal-cards-container">
-        {recipes.map((meal) => (
-          <MealCard key={meal.strMeal} meal={meal} />
-        ))}
-      </div>
+      
     </div>
   );
 };

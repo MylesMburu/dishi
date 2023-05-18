@@ -7,18 +7,18 @@ import MealCard from './components/MealCard';
 
 function App() {
 
-  const [meals, setMeals] = useState([]);
+  // const [meals, setMeals] = useState([]);
 
-  const handleSearch = (searchQuery) => {
-    fetch(`http://localhost:3001/meals/${searchQuery}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setMeals(data.meals);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
+  // const handleSearch = (searchQuery) => {
+  //   fetch(`http://localhost:3001/meals/${searchQuery}`)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setMeals(data.meals);
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // };
 
   return (
 
@@ -28,11 +28,9 @@ function App() {
     <Nav/>
     <Home/>
     <div className="App">
-      <Search onSearch={handleSearch} />
-      <div className="meal-container">
-        {meals &&
-          meals.map((meal) => <MealCard key={meal.idMeal} meal={meal} />)}
-      </div>
+      {/* <Search onSearch={handleSearch} /> */}
+      <Search/>
+       <MealCard />
     </div>
     <Contacts/>
     </>
