@@ -86,10 +86,10 @@ const Home = () => {
 
       <h4 className='text-brown-700 font-bold mt-6 pb-2 border-b border-gray-300'>Popular dishes</h4>
         <div className='flex flex-row md:grid-cols-3 gap-5 '>
-        <div className='flex flex-row md:grid-cols-3 gap-5 '>
+        <div className='flex flex-row md:grid-cols-3 gap-5'>
     {popular.map( (recipe) =>{
       return(
-        <div className='card '>
+        <div className='card ' key={recipe.id}>
             {/* cards */}
             <img src={recipe.image} alt=" "className='image' />
             <div className='m-4'>
@@ -101,6 +101,9 @@ const Home = () => {
               <span>{recipe.readyInMinutes} mins</span>
             </div>
         </div>
+
+          
+
       );
     })
     }
