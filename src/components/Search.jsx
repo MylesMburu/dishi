@@ -21,6 +21,7 @@ const Search = () => {
       }
 
       const data = await response.json();
+      console.log(data);
       // Update the recipes state with the retrieved data
       setRecipe(data.results);
     } catch (error) {
@@ -31,21 +32,23 @@ const Search = () => {
 
   return (
     <div>
-      <div id="Find" className="h-150 bg-gray-400">
+      <div id="Find" className="h-full bg-gray-400">
         <div className="flex justify-center items-center flex-row">
-          <form onSubmit={handleSubmit}>
-            <ImSearch className="pr-1 w-5 mt-8" />
-            <input
-              type="text"
-              placeholder="What would you like to cook?"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="md:w-6/12 rounded mt-8 relative sm:w-3/12"
-            />
-            <button type="submit" className="mt-8 ml-2 bg-white px-1 rounded">
-              Search
-            </button>
-          </form>
+        <form onSubmit={handleSubmit} className="flex items-center">
+  <ImSearch className="w-5 mt-8 mr-2" />
+  <input
+    type="text"
+    placeholder="Search foods..."
+    value={query}
+    onChange={(e) => setQuery(e.target.value)}
+    className="md:w-6/12 rounded mt-8 relative sm:w-3/12"
+  />
+  <button type="submit" className="mt-8 ml-2 bg-white px-2 rounded">
+    Search
+  </button>
+</form>
+
+          
         </div>
 
         <div className='flex flex-row md:grid-cols-3 gap-5'>

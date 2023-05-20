@@ -3,7 +3,6 @@ import Contacts from './components/Contacts';
 import Home from './components/Home';
 import Search from './components/Search';
 import Nav from './components/Nav';
-import MealCard from './components/MealCard';
 
 function App() {
 
@@ -27,11 +26,7 @@ function App() {
     <>
     <Nav/>
     <Home/>
-    <div className="App">
-      {/* <Search onSearch={handleSearch} /> */}
-      <Search/>
-       <MealCard />
-    </div>
+    <Search/>
     <Contacts/>
     </>
 
